@@ -1,0 +1,230 @@
+<main>
+    <section>
+      <div class="full-container">
+        <div class="page-wrapper">
+          <div class="left-page-wrapper">
+            <div class="navigation">
+              <ul class="navigation-list">
+                {{ $Scratch := newScratch}}
+                {{ $Scratch.Set "type_arr" "" }}
+                {{ $getpage:= .File.Dir }}
+                {{ $Scratch.Set "type_arr" (split $getpage "/") }}
+               
+                {{ if lt (len (split $getpage "/")) (2) }}
+                <!-- {{ $Scratch.Set "slas" "\\" }} -->
+                  {{ $Scratch.Set "type_arr" (split $getpage "\\") }}
+                
+                {{ end }}
+               
+                {{ $type_arr := $Scratch.Get "type_arr" }}
+                {{ $basedir := index $type_arr 0 }}
+                {{ $section := site.GetPage $basedir }}
+                {{ range $section.Pages.ByWeight }}         
+                <li>
+                  {{ partial "language_url_change.html" (dict "path" (.URL | absURL) "on" "tap:aboutMenu.toggleVisibility")}}
+                  {{.Title }}</a>
+
+                </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+          <div class="middle-page-wrapper">
+            <div class="inner-wrapper">
+              <div class="top-header">
+                {{.Params.Datetitle}}   {{ with site.GetPage $basedir }} {{ partial "language_url_change.html" (dict "path" (.URL | absURL) "class" "title")}} {{$basedir}}</a>/ {{ end }}
+                {{ if .Title }}
+                <h1 class="main-title">{{ .Title }}</h1>
+                {{ end }}
+              </div>
+              <aside class="">
+             
+              </aside>
+              <div class="prose">
+                <!-- {{ if .Params.Image }}
+                <amp-img layout="responsive" width="900" height="500" src="{{.Params.Image}}"> </amp-img>
+                {{ end }} -->
+                <!-- {{ if .Params.Author}} -->
+                <!-- <div class="col" style="text-align: -webkit-right;">
+                <table>
+                    <tr>
+                        <td>
+                            <amp-img width="70px" height="70px" src="../../{{.Params.Authorimage}}"> </amp-img>                         </td>
+                        <td>
+                            Author:{{.Params.Author}}<br>
+                            {{ if .Params.Linkdin}}
+                            <a href="{{.Params.Linkdin}}"> linkedIn</a>
+                            {{ end }}
+                        </td>
+                    </tr>
+                </table> 
+              </div> -->
+              <!-- <div class="author-detail">
+                <div class="author-img mt-2">
+                  <amp-img layout="fill" width="70px" height="70px" src="../../{{.Params.Authorimage}}"> </amp-img>
+                </div>
+                <div class="">
+                  <p class="author-name">Author:{{.Params.Author}}</p>
+                  {{ if .Params.Linkdin}}
+                      <a href="{{.Params.Linkdin}}" class="author-link"> linkedIn</a>
+                  {{ end }}
+                </div>
+              </div> -->
+                <!-- {{ end }}  -->
+                {{ if .Content }}<div class="container">{{ .Content }}</div>{{ end }}
+              </div>
+            </div>
+                  {{if .NextInSection}}
+                  <button class="btn btn-success detail-btn-center">{{ partial "language_url_change.html" (dict "path" (.NextInSection.Permalink)) }}{{.NextInSection.Title}} </a> </button>
+                  {{end}}
+                  {{if .PrevInSection}}
+                  <button class="btn btn-success detail-btn-center">{{ partial "language_url_change.html" (dict "path" (.PrevInSection.Permalink)) }} {{.PrevInSection.Title}} </a> </button>
+                  {{end}}
+                      {{ with .Site.GetPage }}
+                        {{ partial "language_url_change.html" (dict "path" (.URL | absURL) "style" "color:darkgray" ) }}{{ .Title }}
+                        </a>{{ end }}/
+                      {{ with site.GetPage $basedir }}
+                      {{ partial "language_url_change.html" (dict "path" (.URL | absURL) "style" "color:darkgray" ) }} 
+                       {{$basedir}}{{ end }}  </a>/<a style="list-style-type: none; color: darkgray;" href="javascript:;">{{ path.Base .Page.Permalink }}</a>
+
+
+                      <div class="mt-5">
+                        <div class="text-center">
+                          <h3 class="new-header-text">Those who read this article have read other articles like this.</h3>
+                        </div>
+                        <div class="article-new-listing">
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2017/09/420233158-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>What are the goals and goals of implementing Dynamics 365?</p>
+                            </a>
+                          </div>
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2017/08/727711573-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>Why should you choose Dynamics 365?</p>
+                            </a>
+                          </div>
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2017/10/655901950-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>About the license cost of Dynamics 365</p>
+                            </a>
+                          </div>
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2017/10/561469291-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>Add Dynamics 365 users</p>
+                            </a>
+                          </div>
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2017/09/654251056-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>Five important decisions before deploying Dynamics 365</p>
+                            </a>
+                          </div>
+                          <div class="article-list">
+                            <a href="#" class="article-list-img">
+                                <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/2019/04/94317493-150x150.jpg"  layout="fill" alt="" ></amp-img>
+                            </a>
+                            <a href="#" class="article-list-content">
+                                <p>Dynamics 365 for Marketing Free Edition Setup [2019.04]</p>
+                            </a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="">
+                        <div class="text-center">
+                            <h3 class="new-header-text">Popular articles</h3>
+                        </div>
+                        <div class="popular-listing">
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/2584-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/231-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/2712-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/4473-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/487-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                            <div class="popular-list">
+                                <div class="popular-list-img">
+                                    <amp-img src="https://dynamics365.andaze.com/wp-content/uploads/wordpress-popular-posts/3835-featured-105x105.jpg" width="105" height="105" layout="fill" alt="" ></amp-img>
+                                </div>
+                                <div class="popular-list-content">
+                                    <p>Import data into Dynamics 365</p>
+                                    <span>2019.08.20</span>
+                                    <a href="#">Understand Dynamic 365</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </div>         
+          <div class="right-page-wrapper">
+            <aside>
+              <h6>What's on this Page</h6>
+              <nav>
+                <ul>
+                  <li>{{ .TableOfContents }}</li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>

@@ -1,0 +1,70 @@
+baseURL = "https://dynamics365andaze.netlify.app/"
+
+defaultContentLanguageInSubdir = true
+DefaultContentLanguage = "ja"
+languageCode = "en-us"
+title = ""
+theme = "andaze-hugo-amp"
+timeout = 300000
+googleAnalytics = "UA-144087233-8" # your analitics ID
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "date", "author", "permalink", "content"]
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[Languages]
+############ 1 - Site en Japanese
+[Languages.ja]
+languageName = "JA"
+weight = 1
+languageCode = "ja-JP"
+fillposition = "center"
+format= "webp"
+CompanyName = "アンダーズ株式会社"
+description = ""
+addressCountry = "JP"
+postalCode ="102-0083"
+addressRegion = "東京都"
+addressLocality = "千代田区"
+streetAddress = "麹町2-10-3 エキスパートオフィス1F"
+email = "contact-us@andaze.com"
+telephone = "03-3230-0401"
+hoursAvailable = "Mo-Fr 9:00-18:00"
+
+############ 1 - Site en Japanese
+[Languages.en]
+languageName = "EN"
+weight = 2
+languageCode = "en-us"
+fillposition = "center"
+format= "webp"
+CompanyName = "Andaze Ltd."
+description = ""
+addressCountry = "JP"
+postalCode ="102-0083"
+addressRegion = "Tokyo"
+addressLocality = "Chiyoda-ku"
+streetAddress = "Expert Office 1F, 2-10-3 Kojimachi"
+email = "contact-us@andaze.com"
+telephone = "03-3230-0401"
+hoursAvailable = "Mo-Fr 9:00-18:00"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[params]
+  headerTitle = "Dynamics 365 blog"
+  env = "devlop"
+  imageratio = "1 1.5 2 3"
+  imagewidth = "700"

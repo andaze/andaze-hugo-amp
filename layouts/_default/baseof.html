@@ -1,0 +1,11 @@
+<!doctype html>
+<html amp lang="en">
+    {{- partial "head.html" . -}}
+    <body [class]="overflow">
+        {{- partial "header.html" . -}}
+        <div id="content" class="main-page-content">
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+baseURL = "https://www.andaze.com/dynamics365/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[params]
+  env = "devlop"  
+  imageratio = "1"
+  imagewidth = "700"
