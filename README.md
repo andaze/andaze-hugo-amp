@@ -1,5 +1,12 @@
 <h1 align=center>andaze-hugo-amp | <a  target="_blank" href="">Page Speed (90% +)</a></h1>
 
+---
+
+<p align="center">
+  <img src="{{ `images/site_demo.gif` | absURL }}" alt="screenshot" width="100%">
+</p>
+
+
 ## Andaze Hugo AMP
 Andaze Hugo AMP is an AMP page supporting Hugo theme for documentation websites. The theme provides a simple navigation & structure.
 
