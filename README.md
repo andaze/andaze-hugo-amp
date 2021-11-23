@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="{{ `images/site_demo.gif` | absURL }}" alt="screenshot" width="100%">
+  <img src="https://github.com/andaze/andaze-hugo-amp/blob/devlop/static/images/site_demo.gif" alt="screenshot" width="100%">
 </p>
 
 
