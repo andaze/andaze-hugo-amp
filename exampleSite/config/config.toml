@@ -1,4 +1,4 @@
-baseURL = "https://dynamics365andaze.netlify.app/"
+baseURL = "https://example.org/"
 
 defaultContentLanguageInSubdir = true
 DefaultContentLanguage = "ja"
@@ -6,7 +6,7 @@ languageCode = "en-us"
 title = ""
 theme = "andaze-hugo-amp"
 timeout = 300000
-googleAnalytics = "UA-144087233-8" # your analitics ID
+googleAnalytics = "" # your analitics ID
 
 [outputFormats.Algolia]
 baseName = "algolia"

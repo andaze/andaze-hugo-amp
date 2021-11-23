@@ -1,4 +1,4 @@
-baseURL = "https://focused-mirzakhani-4d90fa.netlify.app/"
+baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 
