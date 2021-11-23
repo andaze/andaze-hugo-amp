@@ -3,19 +3,13 @@
 
 name = "Andaze Hugo Amp"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
+licenselink = "https://github.com/andaze/andaze-hugo-amp/blob/master/LICENSE"
+description = "An AMP pages supported Hugo theme for technical documentation sites."
 homepage = "https://www.andaze.com/ja/dynamics365"
-tags = []
+tags = ["AMP","documentation","multilingual","responsive","docs"]
 features = []
 min_version = "0.41.0"
 
 [author]
   name = "Andaze"
   homepage = "https://www.andaze.com/"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""

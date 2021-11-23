@@ -1,5 +1,7 @@
 <h1 align=center>andaze-hugo-amp | <a  target="_blank" href="">Page Speed (90% +)</a></h1>
----
+
+## Andaze Hugo AMP
+Andaze Hugo AMP is an AMP page supporting Hugo theme for documentation websites. The theme provides a simple navigation & structure.
 
 ## Features
 ---
@@ -59,7 +61,6 @@ $ hugo server --config config/config.toml,config/config_devlop.toml
 <!-- licence -->
 ## License
 Copyright &copy; Designed by [Andaze](https://www.andaze.com/)
-**Code License:** Released under the [MIT] license.
+**Code License:** Released under the [MIT](https://github.com/andaze/andaze-hugo-amp/blob/master/LICENSE) license.
 
-**Image license:** The images are only for demonstration purposes. They have their licenses. We don't have permission to
-share those images.
+**Image license:** The images are only for demonstration purposes. They have their licenses. We don't have permission to share those images.
