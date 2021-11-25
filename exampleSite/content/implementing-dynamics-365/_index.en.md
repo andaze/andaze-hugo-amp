@@ -1,10 +1,10 @@
 ---
 title:  "implementing-dynamics-365"
 draft: false
-weight: 2
+weight: 1
 heading: "Implementing Dynamics 365"
 intro: ""
-step: "STEP.02"
+step: "STEP.01"
 rightMenu: "chepter"
 jsonld: {
       "@context": "https://schema.org",
