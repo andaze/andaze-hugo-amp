@@ -1,4 +1,4 @@
-<h1 align=center>andaze-hugo-amp | <a  target="_blank" href="">Page Speed (90% +)</a></h1>
+<h1 align=center>andaze-hugo-amp | Page Speed (90% +)</h1>
 
 ---
 
