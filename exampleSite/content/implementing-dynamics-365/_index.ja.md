@@ -4,7 +4,7 @@ draft: false
 weight: 2
 heading: "Dynamics 365 を導入する"
 intro: ""
-step: "STEP.02"
+step: "STEP.01"
 rightMenu: "chepter"
 jsonld: {
       "@context": "https://schema.org",
