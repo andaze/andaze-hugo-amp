@@ -12,13 +12,17 @@ Andaze Hugo AMP is an AMP page supporting Hugo theme for documentation websites.
 
 ## Features
 ---
+Andaze Hugo AMP have following feature which always like by each user.
+
+- Easy to manage
 - Multiple language support  (Japanese, English)
-- AMP page support
+- AMP theme
 - Contact form Support
 - Google page speed optimized ( 90% +)
-- Google analytics support
-- SEO support
+- SEO friendly
 - Image Optimization support
+- Responsive theme
+- Goolge Tacking feature
 
 ## Local development
 
